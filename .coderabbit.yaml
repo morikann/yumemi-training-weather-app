@@ -11,5 +11,20 @@ reviews:
   auto_review:
     enabled: true
     drafts: false
+  path_instructions:
+    - path: "**/*.dart"
+      instructions:
+        "
+        - AspectRatio を使用しているか
+          - より意図が分かりやすくなり可読性が向上する
+        - MediaQuery の代わりに FractionallySizedBox を使用しているか
+          - const をつけることができ、パフォーマンスがより向上する
+        - Expanded と Flexible を使い分けているか
+          - より適切なものを使うことによって、可読性が向上する
+        - Column を余分に利用していないか
+        - 不必要に Container を利用していないか
+          - const で定義できる SizedBox や Padding で置き換えられないか確認する
+        - Theme を適宜利用しているか
+        "
 chat:
   auto_reply: true
